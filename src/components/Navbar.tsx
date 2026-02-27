@@ -5,7 +5,8 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "Inicio", href: "#hero" },
   { label: "NovaPods", href: "#earbuds" },
-  { label: "Interior", href: "#exploded" },
+  { label: "NovaBand", href: "#headphones" },
+  { label: "NovaSwitch", href: "#switch" },
   { label: "Specs", href: "#specs" },
   { label: "Contacto", href: "#contact" },
 ];
