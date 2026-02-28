@@ -1,73 +1,165 @@
-# Welcome to your Lovable project
+# FepTech – Fep X1 Pro Series | Landing Page 3D
 
-## Project info
+---
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 1️⃣ Información General
 
-## How can I edit this code?
+| Campo | Detalle |
+|---|---|
+| *Nombre del Proyecto* | FepTech – Fep X1 Pro Series Landing Page |
+| *Estudiante* | Fernando Epieyu Pushaina |
+| *Fecha* | 28 de febrero de 2026 |
+| *Curso* | Calidad Servicio de Software 3 |
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 2️⃣ Descripción del Proyecto
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### ¿Qué hace el proyecto?
 
-Changes made via Lovable will be committed automatically to this repo.
+*FepTech* es una Landing Page interactiva que presenta el smartphone ficticio *Fep X1 Pro Series*, con modelo 3D en tiempo real, selector de colores dinámico y navegación entre secciones de producto.
 
-**Use your preferred IDE**
+El sitio incluye:
+- Modelo 3D interactivo del dispositivo Fep X1
+- Selector dinámico de 5 colores con cambio en tiempo real
+- Navegación entre secciones: FepPods, FepBand, Diademas, FepSwitch, Specs, Contacto
+- Botones de acción: "Comprar ahora" y "Especificaciones"
+- Diseño oscuro premium estilo Apple Event
+- Indicador de scroll animado
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### ¿Qué problema soluciona?
 
-Follow these steps:
+Demuestra cómo una empresa tecnológica puede presentar sus productos de forma *visual, moderna e impactante*, superando las limitaciones de una página estática tradicional.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### ¿Para quién está pensado?
 
-# Step 3: Install the necessary dependencies.
-npm i
+- Empresas de tecnología y manufactura de dispositivos
+- Startups digitales que quieran presentar productos
+- Agencias de marketing digital
+- Portafolio profesional de desarrollador frontend
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+---
+
+## 3️⃣ Tecnologías Utilizadas
+
+| Tecnología | Uso |
+|---|---|
+| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) | Estructura del contenido |
+| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) | Estilos base |
+| ![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=flat&logo=tailwindcss&logoColor=white) | Sistema de diseño utilitario |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | Lógica e interactividad |
+| ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black) | Componentes y estados |
+| ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white) | Framework de producción |
+| ![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat&logo=three.js&logoColor=white) | Motor de gráficos 3D |
+| ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white) | Control de versiones |
+| ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white) | Repositorio remoto |
+| ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=flat&logo=netlify&logoColor=white) | Deploy en producción |
+
+---
+
+## 4️⃣ Estructura del Proyecto
+
+/feptech-landing
+ ├── app/
+ │    ├── layout.tsx          → Layout principal de la app
+ │    └── page.tsx            → Página de entrada (ruta /)
+ ├── components/
+ │    ├── HeroSection.tsx     → Sección principal con modelo 3D
+ │    ├── Navbar.tsx          → Barra de navegación con links
+ │    └── ColorPicker.tsx     → Selector de colores del dispositivo
+ ├── public/
+ │    └── images/             → Capturas y recursos estáticos
+ ├── styles/
+ │    └── globals.css         → Estilos globales y variables
+ ├── package.json             → Dependencias y scripts
+ ├── tailwind.config.js       → Configuración de Tailwind CSS
+ └── README.md                → Documentación oficial
+
+
+### Descripción de carpetas
+
+- *app/* → Configuración principal con el App Router de Next.js
+- *components/* → Componentes reutilizables: hero, navbar y selector de colores
+- *public/* → Imágenes estáticas del proyecto
+- *styles/* → Estilos globales con fondo oscuro y variables de color
+- *package.json* → Dependencias: React, Three.js, Tailwind, etc.
+
+---
+
+## 5️⃣ Funcionalidades
+
+| # | Funcionalidad | Descripción |
+|---|---|---|
+| 1 | *Modelo 3D interactivo* | Smartphone Fep X1 renderizado con Three.js en tiempo real |
+| 2 | *Selector de 5 colores* | Azul, blanco, cyan, rosa y verde con cambio animado |
+| 3 | *Navbar multi-sección* | Links a FepPods, FepBand, Diademas, FepSwitch, Specs y Contacto |
+| 4 | *Botón Comprar ahora* | CTA principal con estilo destacado |
+| 5 | *Sección Especificaciones* | Acceso directo a specs técnicas del dispositivo |
+| 6 | *Diseño responsivo* | Compatible con móvil, tablet y escritorio |
+| 7 | *Indicador de scroll animado* | Guía visual para continuar explorando la página |
+
+---
+
+## 6️⃣ Capturas de Pantalla
+
+### Vista Principal – Hero Section
+![Vista Principal](public/images/inicio.png)
+
+### Selector de Color Activo
+![Selector de Color](public/images/colores.png)
+
+### Modelo 3D del Fep X1
+![Vista 3D](public/images/modelo3d.png)
+
+---
+
+## 7️⃣ Cómo Ejecutar el Proyecto
+bash
+# 1. Clonar el repositorio
+git clone https://github.com/tuusuario/feptech-landing.git
+
+# 2. Entrar en la carpeta
+cd feptech-landing
+
+# 3. Instalar dependencias
+npm install
+
+# 4. Ejecutar el servidor de desarrollo
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Abrir en el navegador: http://localhost:8080
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 8️⃣ Mejoras Futuras
 
-## What technologies are used for this project?
+- [ ] Agregar secciones completas de FepPods, FepBand y Diademas
+- [ ] Implementar vista trasera del Fep X1 con animación de volteo
+- [ ] Añadir animación de componentes internos (exploded view)
+- [ ] Optimización de rendimiento para móviles de gama baja
+- [ ] Integración con backend para sistema de preorden real
+- [ ] Agregar modo claro / modo oscuro
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🤖 Uso de Inteligencia Artificial
 
-## How can I deploy this project?
+Se utilizó IA como herramienta de apoyo para:
+- Generar ideas de funcionalidades y estructura visual
+- Mejorar y optimizar estilos con Tailwind CSS
+- Organizar y redactar esta documentación
+- Corregir errores técnicos durante el desarrollo
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+> ⚠️ Todo el código fue revisado, comprendido y adaptado manualmente.
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## 📄 Licencia
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Proyecto académico – Calidad Servicio de Software 3  
+© 2026 Fernando Epieyu Pushaina – Todos los derechos reservados.
