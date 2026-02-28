@@ -107,7 +107,7 @@ Demuestra cómo una empresa tecnológica puede presentar sus productos de forma 
 ## 6️⃣ Capturas de Pantalla
 
 ### Vista Principal – Hero Section
-![Vista Principal](public/images/![Uploading imagen<img <img width="959" height="527" alt="imagen2" src="https://github.com/user-attachments/assets/9107e435-4f64-41ba-a81d-90e81bc04964" />
+![Vista Principal](public/images/imagen<img <img width="959" height="527" alt="imagen2" src="https://github.com/user-attachments/assets/9107e435-4f64-41ba-a81d-90e81bc04964" />
  />
 2.png…]()
 inicio.png)
