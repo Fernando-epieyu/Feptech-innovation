@@ -24,7 +24,7 @@ const HeroSection = () => {
         <div className="absolute top-1/4 right-1/4 w-[300px] h-[300px] rounded-full bg-primary/5 blur-[80px]" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-8 section-padding pt-32">
+      <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 section-padding pt-24 sm:pt-32">
         <div className="flex flex-col justify-center">
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-primary font-medium text-sm tracking-widest uppercase mb-4">
             El futuro en tus manos
@@ -44,7 +44,7 @@ const HeroSection = () => {
           </motion.div>
         </div>
 
-        <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.4, duration: 0.8 }} className="h-[500px] lg:h-[600px]">
+        <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.4, duration: 0.8 }} className="h-[350px] sm:h-[450px] lg:h-[600px]">
           <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
             <ambientLight intensity={0.3} />
             <spotLight position={[5, 5, 5]} intensity={1} angle={0.3} penumbra={0.8} color="#3b82f6" />

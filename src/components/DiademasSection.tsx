@@ -5,7 +5,7 @@ import { Environment, ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
 import ColorPicker from "./ColorPicker";
 
-/* ---------- 3D Diadema Model ---------- */
+/* ---------- 3D Diadema Model (more complete) ---------- */
 const DiademaModel = ({ mouseX = 0, color = "#111827" }: { mouseX?: number; color?: string }) => {
   const group = useRef<THREE.Group>(null);
 
@@ -16,61 +16,124 @@ const DiademaModel = ({ mouseX = 0, color = "#111827" }: { mouseX?: number; colo
       mouseX * 0.5 + Math.sin(state.clock.elapsedTime * 0.4) * 0.08,
       0.04
     );
-    group.current.position.y = Math.sin(state.clock.elapsedTime * 0.7) * 0.1;
+    group.current.position.y = Math.sin(state.clock.elapsedTime * 0.7) * 0.08;
   });
 
   return (
     <group ref={group}>
-      {/* Headband arc */}
-      <mesh position={[0, 1.0, 0]}>
-        <torusGeometry args={[1.1, 0.06, 16, 48, Math.PI]} />
-        <meshPhysicalMaterial color={color} metalness={0.5} roughness={0.2} clearcoat={1} />
+      {/* Main headband arc - outer shell */}
+      <mesh position={[0, 1.05, 0]} rotation={[0, 0, 0]}>
+        <torusGeometry args={[1.15, 0.07, 16, 64, Math.PI]} />
+        <meshPhysicalMaterial color={color} metalness={0.6} roughness={0.15} clearcoat={1} clearcoatRoughness={0.1} />
       </mesh>
-      {/* Padded top */}
-      <mesh position={[0, 1.06, 0]}>
-        <torusGeometry args={[1.1, 0.04, 8, 48, Math.PI]} />
+      {/* Headband inner padding */}
+      <mesh position={[0, 1.05, 0]}>
+        <torusGeometry args={[1.08, 0.045, 12, 64, Math.PI]} />
+        <meshPhysicalMaterial color="#3a3a3a" roughness={0.95} />
+      </mesh>
+      {/* Headband top cushion */}
+      <mesh position={[0, 1.12, 0]}>
+        <torusGeometry args={[0.6, 0.035, 8, 32, Math.PI]} />
         <meshPhysicalMaterial color="#444" roughness={0.9} />
       </mesh>
-      {/* Left ear pad - flat on-ear style */}
-      <group position={[-1.08, 0.0, 0]}>
+
+      {/* Left slider arm */}
+      <mesh position={[-1.12, 0.55, 0]}>
+        <boxGeometry args={[0.045, 0.75, 0.045]} />
+        <meshPhysicalMaterial color={color} metalness={0.8} roughness={0.15} />
+      </mesh>
+      {/* Left slider detail */}
+      <mesh position={[-1.12, 0.35, 0.03]}>
+        <boxGeometry args={[0.02, 0.25, 0.01]} />
+        <meshPhysicalMaterial color="#555" metalness={0.5} roughness={0.3} />
+      </mesh>
+
+      {/* Right slider arm */}
+      <mesh position={[1.12, 0.55, 0]}>
+        <boxGeometry args={[0.045, 0.75, 0.045]} />
+        <meshPhysicalMaterial color={color} metalness={0.8} roughness={0.15} />
+      </mesh>
+      {/* Right slider detail */}
+      <mesh position={[1.12, 0.35, 0.03]}>
+        <boxGeometry args={[0.02, 0.25, 0.01]} />
+        <meshPhysicalMaterial color="#555" metalness={0.5} roughness={0.3} />
+      </mesh>
+
+      {/* Left ear cup - outer shell */}
+      <group position={[-1.12, -0.05, 0]}>
         <mesh rotation={[0, 0, Math.PI / 2]}>
-          <cylinderGeometry args={[0.38, 0.38, 0.12, 32]} />
-          <meshPhysicalMaterial color={color} metalness={0.3} roughness={0.15} clearcoat={1} />
+          <cylinderGeometry args={[0.42, 0.42, 0.14, 48]} />
+          <meshPhysicalMaterial color={color} metalness={0.4} roughness={0.12} clearcoat={1} clearcoatRoughness={0.05} />
         </mesh>
-        <mesh position={[0.07, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
-          <torusGeometry args={[0.28, 0.08, 16, 32]} />
-          <meshPhysicalMaterial color="#333" roughness={0.95} />
+        {/* Ear cup rim */}
+        <mesh rotation={[0, 0, Math.PI / 2]}>
+          <torusGeometry args={[0.42, 0.02, 16, 48]} />
+          <meshPhysicalMaterial color={color} metalness={0.7} roughness={0.1} />
         </mesh>
-        {/* Accent ring */}
-        <mesh position={[-0.07, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
-          <torusGeometry args={[0.32, 0.015, 16, 32]} />
-          <meshPhysicalMaterial color="#1a73e8" emissive="#1a73e8" emissiveIntensity={1.2} metalness={0.9} />
+        {/* Ear cushion */}
+        <mesh position={[0.08, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
+          <torusGeometry args={[0.32, 0.09, 16, 48]} />
+          <meshPhysicalMaterial color="#2a2a2a" roughness={0.95} />
+        </mesh>
+        {/* Inner mesh grille */}
+        <mesh position={[0.08, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
+          <circleGeometry args={[0.24, 48]} />
+          <meshPhysicalMaterial color="#1a1a1a" roughness={0.8} metalness={0.2} />
+        </mesh>
+        {/* LED accent ring */}
+        <mesh position={[-0.075, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
+          <torusGeometry args={[0.35, 0.012, 16, 48]} />
+          <meshPhysicalMaterial color="#1a73e8" emissive="#1a73e8" emissiveIntensity={1.5} metalness={0.9} />
+        </mesh>
+        {/* Brand logo circle */}
+        <mesh position={[-0.076, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
+          <circleGeometry args={[0.12, 48]} />
+          <meshPhysicalMaterial color={color} metalness={0.7} roughness={0.1} clearcoat={1} />
+        </mesh>
+        {/* Hinge joint */}
+        <mesh position={[0, 0.42, 0]}>
+          <sphereGeometry args={[0.04, 16, 16]} />
+          <meshPhysicalMaterial color={color} metalness={0.8} roughness={0.15} />
         </mesh>
       </group>
-      {/* Right ear pad */}
-      <group position={[1.08, 0.0, 0]}>
+
+      {/* Right ear cup - outer shell */}
+      <group position={[1.12, -0.05, 0]}>
         <mesh rotation={[0, 0, Math.PI / 2]}>
-          <cylinderGeometry args={[0.38, 0.38, 0.12, 32]} />
-          <meshPhysicalMaterial color={color} metalness={0.3} roughness={0.15} clearcoat={1} />
+          <cylinderGeometry args={[0.42, 0.42, 0.14, 48]} />
+          <meshPhysicalMaterial color={color} metalness={0.4} roughness={0.12} clearcoat={1} clearcoatRoughness={0.05} />
         </mesh>
-        <mesh position={[-0.07, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
-          <torusGeometry args={[0.28, 0.08, 16, 32]} />
-          <meshPhysicalMaterial color="#333" roughness={0.95} />
+        {/* Ear cup rim */}
+        <mesh rotation={[0, 0, Math.PI / 2]}>
+          <torusGeometry args={[0.42, 0.02, 16, 48]} />
+          <meshPhysicalMaterial color={color} metalness={0.7} roughness={0.1} />
         </mesh>
-        <mesh position={[0.07, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
-          <torusGeometry args={[0.32, 0.015, 16, 32]} />
-          <meshPhysicalMaterial color="#1a73e8" emissive="#1a73e8" emissiveIntensity={1.2} metalness={0.9} />
+        {/* Ear cushion */}
+        <mesh position={[-0.08, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
+          <torusGeometry args={[0.32, 0.09, 16, 48]} />
+          <meshPhysicalMaterial color="#2a2a2a" roughness={0.95} />
+        </mesh>
+        {/* Inner mesh grille */}
+        <mesh position={[-0.08, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
+          <circleGeometry args={[0.24, 48]} />
+          <meshPhysicalMaterial color="#1a1a1a" roughness={0.8} metalness={0.2} />
+        </mesh>
+        {/* LED accent ring */}
+        <mesh position={[0.075, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
+          <torusGeometry args={[0.35, 0.012, 16, 48]} />
+          <meshPhysicalMaterial color="#1a73e8" emissive="#1a73e8" emissiveIntensity={1.5} metalness={0.9} />
+        </mesh>
+        {/* Brand logo circle */}
+        <mesh position={[0.076, 0, 0]} rotation={[0, 0, Math.PI / 2]}>
+          <circleGeometry args={[0.12, 48]} />
+          <meshPhysicalMaterial color={color} metalness={0.7} roughness={0.1} clearcoat={1} />
+        </mesh>
+        {/* Hinge joint */}
+        <mesh position={[0, 0.42, 0]}>
+          <sphereGeometry args={[0.04, 16, 16]} />
+          <meshPhysicalMaterial color={color} metalness={0.8} roughness={0.15} />
         </mesh>
       </group>
-      {/* Connecting arms */}
-      <mesh position={[-1.06, 0.5, 0]}>
-        <boxGeometry args={[0.05, 0.7, 0.05]} />
-        <meshPhysicalMaterial color={color} metalness={0.7} roughness={0.2} />
-      </mesh>
-      <mesh position={[1.06, 0.5, 0]}>
-        <boxGeometry args={[0.05, 0.7, 0.05]} />
-        <meshPhysicalMaterial color={color} metalness={0.7} roughness={0.2} />
-      </mesh>
     </group>
   );
 };
@@ -103,18 +166,19 @@ const DiademasSection = () => {
     >
       <div className="absolute top-1/3 left-0 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[100px]" />
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* 3D Model */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="h-[400px] lg:h-[500px]"
+          className="h-[350px] sm:h-[400px] lg:h-[500px]"
         >
-          <Canvas camera={{ position: [0, 0.5, 4], fov: 38 }}>
-            <ambientLight intensity={0.4} />
+          <Canvas camera={{ position: [0, 0.5, 3.5], fov: 40 }}>
+            <ambientLight intensity={0.5} />
             <spotLight position={[3, 4, 5]} intensity={1.2} angle={0.4} penumbra={0.8} color="#3b82f6" />
             <spotLight position={[-3, 2, 4]} intensity={0.5} color="#93c5fd" />
+            <pointLight position={[0, -1, 3]} intensity={0.3} color="#60a5fa" />
             <Suspense fallback={null}>
               <DiademaModel mouseX={mouseX} color={color} />
               <ContactShadows position={[0, -0.8, 0]} opacity={0.3} blur={2} scale={5} />
@@ -137,7 +201,7 @@ const DiademasSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
-            className="text-4xl md:text-5xl font-display font-bold mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-6"
           >
             <span className="gradient-text">FepBand</span>
             <br />
@@ -147,7 +211,7 @@ const DiademasSection = () => {
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ delay: 0.4 }}
-            className="text-muted-foreground text-lg mb-6 max-w-md"
+            className="text-muted-foreground text-base sm:text-lg mb-6 max-w-md"
           >
             Diadema on-ear ultraligera con audio Hi-Res y diseño plegable. Perfecta para el día a día con máximo estilo.
           </motion.p>
@@ -167,7 +231,7 @@ const DiademasSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.5 + i * 0.1 }}
-                className="glass rounded-xl p-5 hover-scale"
+                className="glass rounded-xl p-4 sm:p-5 hover-scale"
               >
                 <h3 className="text-foreground font-semibold text-sm mb-1">{f.title}</h3>
                 <p className="text-muted-foreground text-xs leading-relaxed">{f.desc}</p>

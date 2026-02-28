@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -22,6 +22,16 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const id = href.replace("#", "");
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setMobileOpen(false);
+  }, []);
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -31,11 +41,11 @@ const Navbar = () => {
         scrolled ? "glass-strong shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4">
         {/* Logo */}
-        <a href="#hero" className="flex items-center gap-2">
+        <a href="#hero" onClick={(e) => scrollToSection(e, "#hero")} className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-display font-bold text-sm">N</span>
+            <span className="text-primary-foreground font-display font-bold text-sm">F</span>
           </div>
           <span className="font-display font-bold text-lg text-foreground">
             Fep<span className="text-primary">Tech</span>
@@ -43,11 +53,12 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
+              onClick={(e) => scrollToSection(e, item.href)}
               className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
             >
               {item.label}
@@ -55,6 +66,7 @@ const Navbar = () => {
           ))}
           <a
             href="#contact"
+            onClick={(e) => scrollToSection(e, "#contact")}
             className="px-5 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
           >
             Comprar
@@ -84,12 +96,19 @@ const Navbar = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => scrollToSection(e, item.href)}
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   {item.label}
                 </a>
               ))}
+              <a
+                href="#contact"
+                onClick={(e) => scrollToSection(e, "#contact")}
+                className="px-6 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium"
+              >
+                Comprar
+              </a>
             </div>
           </motion.div>
         )}
