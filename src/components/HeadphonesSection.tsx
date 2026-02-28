@@ -77,7 +77,7 @@ const HeadphonesSection = () => {
             ))}
           </div>
         </div>
-        <motion.div initial={{ opacity: 0, x: 50 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8 }} className="h-[400px] lg:h-[500px]">
+        <motion.div initial={{ opacity: 0, x: 50 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8 }} className="h-[300px] sm:h-[400px] lg:h-[500px]">
           <Canvas camera={{ position: [0, 0.5, 4], fov: 38 }}>
             <ambientLight intensity={0.4} />
             <spotLight position={[3, 4, 5]} intensity={1.2} angle={0.4} penumbra={0.8} color="#3b82f6" />

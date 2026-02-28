@@ -139,7 +139,7 @@ const ExplodedSection = () => {
         </div>
 
         {/* 3D exploded view */}
-        <motion.div className="h-[500px] lg:h-[600px]">
+        <motion.div className="h-[350px] sm:h-[450px] lg:h-[600px]">
           <Canvas camera={{ position: [0, 0, 7], fov: 40 }}>
             <ambientLight intensity={0.3} />
             <spotLight position={[5, 5, 5]} intensity={1} color="#3b82f6" angle={0.3} penumbra={0.8} />

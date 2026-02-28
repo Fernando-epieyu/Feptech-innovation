@@ -27,7 +27,7 @@ const EarbudsSection = () => {
     <section id="earbuds" ref={ref} className="relative min-h-screen section-padding" onMouseMove={handleMouseMove}>
       <div className="absolute top-1/3 right-0 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[100px]" />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <motion.div initial={{ opacity: 0, x: -50 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8 }} className="h-[400px] lg:h-[500px] order-2 lg:order-1">
+        <motion.div initial={{ opacity: 0, x: -50 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8 }} className="h-[300px] sm:h-[400px] lg:h-[500px] order-2 lg:order-1">
           <Canvas camera={{ position: [0, 0, 5], fov: 40 }}>
             <ambientLight intensity={0.4} />
             <spotLight position={[3, 4, 5]} intensity={1.2} angle={0.4} penumbra={0.8} color="#3b82f6" />
