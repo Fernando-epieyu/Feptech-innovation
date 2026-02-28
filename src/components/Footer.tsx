@@ -6,7 +6,7 @@ const Footer = () => (
           <span className="text-primary-foreground font-display font-bold text-xs">N</span>
         </div>
         <span className="font-display text-sm text-muted-foreground">
-          Nova<span className="text-foreground">Tech</span> © 2026
+          Fep<span className="text-foreground">Tech</span> © 2026
         </span>
       </div>
       <div className="flex gap-6 text-xs text-muted-foreground">
