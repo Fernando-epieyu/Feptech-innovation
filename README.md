@@ -63,24 +63,21 @@ Demuestra cómo una empresa tecnológica puede presentar sus productos de forma 
 
 ## 4️⃣ Estructura del Proyecto
 
-´´´
-/feptech-landing
-├── app/
-│   ├── layout.tsx
-│   └── page.tsx
-├── components/
-│   ├── HeroSection.tsx
-│   ├── Navbar.tsx
-│   └── ColorPicker.tsx
-├── public/
-│   └── images/
-├── styles/
-│   └── globals.css
-├── package.json
-├── tailwind.config.js
-└── README.md
-
-´´´
+    /feptech-landing
+    ├── app/
+    │   ├── layout.tsx
+    │   └── page.tsx
+    ├── components/
+    │   ├── HeroSection.tsx
+    │   ├── Navbar.tsx
+    │   └── ColorPicker.tsx
+    ├── public/
+    │   └── images/
+    ├── styles/
+    │   └── globals.css
+    ├── package.json
+    ├── tailwind.config.js
+    └── README.md
 
 ### Descripción de carpetas
 
