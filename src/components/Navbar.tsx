@@ -4,9 +4,10 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Inicio", href: "#hero" },
-  { label: "NovaPods", href: "#earbuds" },
-  { label: "NovaBand", href: "#headphones" },
-  { label: "NovaSwitch", href: "#switch" },
+  { label: "FepPods", href: "#earbuds" },
+  { label: "FepBand", href: "#headphones" },
+  { label: "Diademas", href: "#diademas" },
+  { label: "FepSwitch", href: "#switch" },
   { label: "Specs", href: "#specs" },
   { label: "Contacto", href: "#contact" },
 ];
@@ -37,7 +38,7 @@ const Navbar = () => {
             <span className="text-primary-foreground font-display font-bold text-sm">N</span>
           </div>
           <span className="font-display font-bold text-lg text-foreground">
-            Nova<span className="text-primary">Tech</span>
+            Fep<span className="text-primary">Tech</span>
           </span>
         </a>
 

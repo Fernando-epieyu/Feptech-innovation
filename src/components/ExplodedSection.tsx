@@ -53,7 +53,7 @@ const ExplodedPhone = ({ progress }: { progress: number }) => {
       {/* Battery */}
       <ComponentLayer position={[0, -spread * 0.6, 0]} color="#059669" emissive="#10b981" label="Battery" size={[1.8, 0.2, 0.9]} />
       {/* Main board / Chip */}
-      <ComponentLayer position={[0, 0, 0]} color="#1e40af" emissive="#3b82f6" label="NovaTech A1 Chip" size={[2, 0.12, 1.1]} />
+      <ComponentLayer position={[0, 0, 0]} color="#1e40af" emissive="#3b82f6" label="FepTech A1 Chip" size={[2, 0.12, 1.1]} />
       {/* Camera module */}
       <ComponentLayer position={[-0.5, spread * 0.4, 0]} color="#1f2937" label="Camera Array" size={[0.8, 0.15, 0.8]} />
       {/* Display */}
@@ -109,7 +109,7 @@ const ExplodedSection = () => {
             viewport={{ once: true }}
             className="text-muted-foreground text-lg mb-8 max-w-md leading-relaxed"
           >
-            Desliza para explorar las capas internas del Nova X1. Desde el Ceramic Shield
+            Desliza para explorar las capas internas del Fep X1. Desde el Ceramic Shield
             hasta la batería de grafeno, cada pieza está diseñada para la excelencia.
           </motion.p>
 
@@ -117,7 +117,7 @@ const ExplodedSection = () => {
             {[
               { label: "Ceramic Shield", desc: "Protección extrema" },
               { label: "Pantalla AMOLED", desc: "6.8\" 120Hz HDR10+" },
-              { label: "Chip NovaTech A1", desc: "5nm, 6 núcleos" },
+              { label: "Chip FepTech A1", desc: "5nm, 6 núcleos" },
               { label: "Batería Grafeno", desc: "5500mAh, carga 0-100 en 25min" },
             ].map((item, i) => (
               <motion.div

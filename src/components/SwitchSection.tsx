@@ -34,7 +34,7 @@ const SwitchSection = () => {
             transition={{ delay: 0.2 }}
             className="text-4xl md:text-5xl font-display font-bold mb-4"
           >
-            <span className="gradient-text">NovaSwitch</span>{" "}
+            <span className="gradient-text">FepSwitch</span>{" "}
             <span className="text-foreground">Pro</span>
           </motion.h2>
           <motion.p
@@ -69,7 +69,7 @@ const SwitchSection = () => {
                   <Power className="w-8 h-8 text-muted-foreground" />
                 </div>
                 {/* Label */}
-                <span className="text-xs text-muted-foreground tracking-widest uppercase mt-2">NovaSwitch</span>
+                <span className="text-xs text-muted-foreground tracking-widest uppercase mt-2">FepSwitch</span>
               </div>
               {/* Ambient glow */}
               <div className="absolute -inset-4 rounded-[2.5rem] bg-primary/5 blur-xl -z-10" />

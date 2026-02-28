@@ -39,12 +39,12 @@ const ContactSection = () => {
             className="space-y-8"
           >
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Reserva tu Nova X1 Pro o NovaPods Ultra. Nuestro equipo te asesora con la mejor configuración para ti.
+              Reserva tu Fep X1 Pro o FepPods Ultra. Nuestro equipo te asesora con la mejor configuración para ti.
             </p>
             {[
               { icon: MapPin, text: "Silicon Valley, CA 94025" },
-              { icon: Mail, text: "hello@novatech.io" },
-              { icon: Phone, text: "+1 (800) NOVA-X1" },
+              { icon: Mail, text: "hello@feptech.io" },
+              { icon: Phone, text: "+1 (800) FEP-X1" },
             ].map((item) => {
               const Icon = item.icon;
               return (

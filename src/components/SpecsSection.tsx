@@ -4,7 +4,7 @@ import { Cpu, Battery, Monitor, Camera, Wifi, Shield } from "lucide-react";
 
 const specs = [
   { icon: Monitor, label: "Pantalla", value: '6.8" AMOLED 120Hz', detail: "2K+ · HDR10+ · 2000 nits" },
-  { icon: Cpu, label: "Procesador", value: "NovaTech A1", detail: "5nm · 6 núcleos · 3.5GHz" },
+  { icon: Cpu, label: "Procesador", value: "FepTech A1", detail: "5nm · 6 núcleos · 3.5GHz" },
   { icon: Camera, label: "Cámara", value: "200MP Triple", detail: "OIS · Zoom óptico 10x" },
   { icon: Battery, label: "Batería", value: "5500mAh", detail: "Carga 65W · Inalámbrica 15W" },
   { icon: Wifi, label: "Conectividad", value: "5G + WiFi 7", detail: "Bluetooth 5.4 · UWB" },
