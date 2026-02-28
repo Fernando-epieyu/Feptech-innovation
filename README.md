@@ -64,20 +64,20 @@ Demuestra cómo una empresa tecnológica puede presentar sus productos de forma 
 ## 4️⃣ Estructura del Proyecto
 
 /feptech-landing
- ├── app/
- │    ├── layout.tsx          → Layout principal de la app
- │    └── page.tsx            → Página de entrada (ruta /)
- ├── components/
- │    ├── HeroSection.tsx     → Sección principal con modelo 3D
- │    ├── Navbar.tsx          → Barra de navegación con links
- │    └── ColorPicker.tsx     → Selector de colores del dispositivo
- ├── public/
- │    └── images/             → Capturas y recursos estáticos
- ├── styles/
- │    └── globals.css         → Estilos globales y variables
- ├── package.json             → Dependencias y scripts
- ├── tailwind.config.js       → Configuración de Tailwind CSS
- └── README.md                → Documentación oficial
+├── app/
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── HeroSection.tsx
+│   ├── Navbar.tsx
+│   └── ColorPicker.tsx
+├── public/
+│   └── images/
+├── styles/
+│   └── globals.css
+├── package.json
+├── tailwind.config.js
+└── README.md
 
 
 ### Descripción de carpetas
