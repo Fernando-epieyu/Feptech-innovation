@@ -35,7 +35,8 @@ Demuestra cómo una empresa tecnológica puede presentar sus productos de forma 
 
 ---
 
-### ¿Para quién está pensado?
+### ¿Para quién está pensado?<img width="959" height="527" alt="imagen2" src="https://github.com/user-attachments/assets/87df8e22-e3f9-4ba8-a72a-33ad65a7ec79" />
+
 
 - Empresas de tecnología y manufactura de dispositivos
 - Startups digitales que quieran presentar productos
@@ -106,13 +107,17 @@ Demuestra cómo una empresa tecnológica puede presentar sus productos de forma 
 ## 6️⃣ Capturas de Pantalla
 
 ### Vista Principal – Hero Section
-![Vista Principal](public/images/inicio.png)
+![Vista Principal](public/images/![Uploading imagen<img width="959" height="527" alt="imagen2" src="https://github.com/user-attachments/assets/209f7522-9b29-41a1-b71a-7ba72abe0010" />
+2.png…]()
+inicio.png)
 
 ### Selector de Color Activo
-![Selector de Color](public/images/colores.png)
+![Selector de Color](public/images/colo<img width="957" height="490" alt="imagen 3" src="https://github.com/user-attachments/assets/ea8c6332-6e62-47a9-9b57-f2556ee182f2" />
+res.png)
 
 ### Modelo 3D del Fep X1
-![Vista 3D](public/images/modelo3d.png)
+![Vista 3D](public/images/modelo3d.p<img width="287" height="397" alt="imagen 4" src="https://github.com/user-attachments/assets/585a9489-c526-4f92-8290-de18233377a9" />
+ng)
 
 ---
 
