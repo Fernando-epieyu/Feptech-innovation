@@ -35,7 +35,7 @@ Demuestra cómo una empresa tecnológica puede presentar sus productos de forma 
 
 ---
 
-### ¿Para quién está pensado?<img width="959" height="527" alt="imagen2" src="https://github.com/user-attachments/assets/87df8e22-e3f9-4ba8-a72a-33ad65a7ec79" />
+### ¿Para quién está pensado?
 
 
 - Empresas de tecnología y manufactura de dispositivos
@@ -107,7 +107,8 @@ Demuestra cómo una empresa tecnológica puede presentar sus productos de forma 
 ## 6️⃣ Capturas de Pantalla
 
 ### Vista Principal – Hero Section
-![Vista Principal](public/images/![Uploading imagen<img width="959" height="527" alt="imagen2" src="https://github.com/user-attachments/assets/209f7522-9b29-41a1-b71a-7ba72abe0010" />
+![Vista Principal](public/images/![Uploading imagen<img <img width="959" height="527" alt="imagen2" src="https://github.com/user-attachments/assets/9107e435-4f64-41ba-a81d-90e81bc04964" />
+ />
 2.png…]()
 inicio.png)
 
