@@ -62,6 +62,7 @@ Demuestra cómo una empresa tecnológica puede presentar sus productos de forma 
 ---
 
 ## 4️⃣ Estructura del Proyecto
+
 ´´´
 /feptech-landing
 ├── app/
@@ -78,6 +79,7 @@ Demuestra cómo una empresa tecnológica puede presentar sus productos de forma 
 ├── package.json
 ├── tailwind.config.js
 └── README.md
+
 ´´´
 
 ### Descripción de carpetas
